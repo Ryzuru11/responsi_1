@@ -25,17 +25,15 @@ document.addEventListener("DOMContentLoaded", function () {
     lastScroll = currentScroll;
   });
 
-  // Modified image loading animation
-  const images = document.querySelectorAll("img:not(.hero-profile-img)"); // Exclude hero profile image
+  // Add loading animation for images
+  const images = document.querySelectorAll("img");
   images.forEach((img) => {
-    if (!img.classList.contains("hero-profile-img")) {
-      img.style.opacity = "0";
-      img.style.transition = "opacity 0.5s ease-in-out";
+    img.style.opacity = "0";
+    img.style.transition = "opacity 0.5s ease-in-out";
 
-      img.addEventListener("load", function () {
-        img.style.opacity = "1";
-      });
-    }
+    img.addEventListener("load", function () {
+      img.style.opacity = "1";
+    });
   });
 
   // Add hover effect for badges
@@ -59,5 +57,45 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
       }
     });
+  }
+  function handleDownload(event) {
+    const link = event.currentTarget;
+
+    // Add loading state
+    link.classList.add("loading");
+
+    // Fetch the file
+    fetch(link.href)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.blob();
+      })
+      .then((blob) => {
+        // Create a new URL for the blob
+        const url = window.URL.createObjectURL(blob);
+
+        // Create a temporary link and click it
+        const tempLink = document.createElement("a");
+        tempLink.href = url;
+        tempLink.download = link.getAttribute("download");
+        document.body.appendChild(tempLink);
+        tempLink.click();
+        document.body.removeChild(tempLink);
+
+        // Clean up
+        window.URL.revokeObjectURL(url);
+      })
+      .catch((error) => {
+        console.error("Download failed:", error);
+        alert(
+          "Maaf, terjadi kesalahan saat mengunduh CV. Silakan coba lagi nanti."
+        );
+      })
+      .finally(() => {
+        // Remove loading state
+        link.classList.remove("loading");
+      });
   }
 });

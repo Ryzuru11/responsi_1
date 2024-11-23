@@ -9,87 +9,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <style>
-      .hero-text-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .profile-container {
-        width: 100%;
-        max-width: 300px;
-        margin: 2rem auto;
-        position: relative;
-      }
-
-      .hero-profile-img {
-        width: 100%;
-        height: auto;
-        border-radius: 50%;
-        aspect-ratio: 1/1;
-        object-fit: cover;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        border: 4px solid var(--primary);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .hero-profile-img:hover {
-        transform: scale(1.02);
-        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
-      }
-
-      .hero-description {
-        font-size: 1.2rem;
-        color: var(--text-secondary);
-        margin: 1.5rem 0;
-        line-height: 1.6;
-      }
-
-      .download-cv {
-        display: inline-block;
-        padding: 12px 24px;
-        background-color: var(--primary);
-        color: white;
-        text-decoration: none;
-        border-radius: 6px;
-        font-weight: 500;
-        transition: background-color 0.3s ease;
-      }
-
-      .download-cv:hover {
-        background-color: var(--primary-dark);
-      }
-
-      /* Tambahkan indikator loading */
-      .download-cv.loading {
-        opacity: 0.7;
-        cursor: wait;
-      }
-
-      @media (max-width: 768px) {
-        .profile-container {
-          max-width: 250px;
-        }
-
-        .hero-text-container {
-          padding: 0 1rem;
-        }
-
-        .hero-description {
-          font-size: 1.1rem;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .profile-container {
-          max-width: 200px;
-        }
-      }
-    </style>
   </head>
   <body>
     <!-- Navbar -->
@@ -98,159 +17,120 @@
       <div class="nav-links">
         <a href="#" class="active">Home</a>
         <a href="about.html">About</a>
+        <a href="#contact.css" class="contact-btn">Contact</a>
       </div>
     </nav>
 
-    <!-- Hero Section -->
-    <main class="hero">
-      <div class="hero-content">
-        <div class="hero-text-container">
-          <h1 id="hello-my-name-is-hilman-satia-pebrian" class="animate-text">
-            Hello, my name is Hilman Satia Pebrian
-          </h1>
+    <body class="light-mode">
+      <!-- Hero Section -->
+      <main class="hero">
+        <div class="hero-content">
+          <div class="hero-text-container">
+            <h1 id="hello-my-name-is-hilman-satia-pebrian" class="animate-text">
+              Hello, my name is Hilman Satia Pebrian
+            </h1>
 
-          <div class="profile-container">
-            <img
-              src="img/rian.jpg"
-              alt="Hilman Satia Pebrian"
-              class="hero-profile-img"
-            />
+            <div class="profile-container">
+              <img
+                src="img/rian.jpg"
+                alt="Hilman Satia Pebrian"
+                class="hero-profile-img"
+              />
+            </div>
+
+            <p class="-description">
+              I am a third-semester student of Information Technology at UNISA.
+            </p>
+
+            <div class="badges">
+              <span class="badge"
+                ><span class="icon">&lt;/&gt;</span> Programming</span
+              >
+              <span class="badge"><span class="icon">🎤</span> Speaker</span>
+              <span class="badge"><span class="icon">✍️</span> Writer</span>
+            </div>
+
+            <div class="cta-buttons">
+              <a
+                href="PDF/Hilman Satia Pebrian.pdf"
+                class="download-cv"
+                download="Hilman-Satia-Pebrian-CV.pdf"
+                onclick="handleDownload(event)"
+              >
+                Download CV
+              </a>
+              <a href="contact.html" class="contact-btn">Contact Me</a>
+            </div>
           </div>
 
-          <p class="hero-description">
-            I am a third-semester student of Information Technology at UNISA.
-          </p>
+          <div class="container">
+            <section class="section">
+              <h2>Background</h2>
+              <p class="content">
+                Saya adalah mahasiswa Teknologi Informasi di Universitas
+                Aisyiyah Yogyakarta (UNISA) dengan minat yang kuat dalam
+                pemrograman dan teknologi. Saat ini, saya sedang menjelajahi
+                berbagai bidang dalam TI, seperti pengembangan perangkat lunak
+                dan desain UI/UX. <br> Di luar teknologi, saya memiliki passion
+                untuk olahraga, khususnya karate, dimana saya telah meraih
+                beberapa prestasi dalam kompetisi.
+              </p>
+            </section>
 
-          <div class="badges">
-            <span class="badge"
-              ><span class="icon">&lt;/&gt;</span> Programming</span
-            >
-            <span class="badge"><span class="icon">🎤</span> Speaker</span>
-            <span class="badge"><span class="icon">✍️</span> Writer</span>
-          </div>
+            <section class="section">
+              <h2>Skills and Achievements</h2>
+              <ul class="achievements-list">
+                <li class="achievement-item">
+                  <div class="bullet"></div>
+                  <div class="achievement-content">
+                    Programming: Berpengalaman dalam bahasa pemrograman seperti
+                    C dan menjelajahi Full Stack Development dan UI/UX Design.
+                  </div>
+                </li>
+                
+                <li class="achievement-item">
+                  <div class="bullet"></div>
+                  <div class="achievement-content">
+                    Swimming Competition: Juara 3 dalam kompetisi renang di
+                    Mataram, Lombok Barat.
+                  </div>
+                </li>
+                <li class="achievement-item">
+                  <div class="bullet"></div>
+                  <div class="achievement-content">
+                    Karate Competition: Juara 2 dalam kompetisi karate tingkat
+                    provinsi di Malang.
+                  </div>
+                </li>
+                <li class="achievement-item">
+                  <div class="bullet"></div>
+                  <div class="achievement-content">
+                    Coding Competition: Juara 2 dalam kompetisi coding tingkat
+                    SMA.
+                  </div>
+                </li>
+                <li class="achievement-item">
+                  <div class="bullet"></div>
+                  <div class="achievement-content">
+                    Technology Projects: Terlibat dalam beberapa proyek
+                    pengembangan aplikasi dan web.
+                  </div>
+                </li>
+              </ul>
+            </section>
 
-          <div class="cta-buttons">
-            <a
-              href="PDF/Hilman Satia Pebrian.pdf"
-              class="download-cv"
-              download="Hilman-Satia-Pebrian-CV.pdf"
-              onclick="handleDownload(event)"
-            >
-              Download CV
-            </a>
-            <a href="#contact" class="contact-btn">Contact Me</a>
+            <section class="section">
+              <h2>Goals and Aspirations</h2>
+              <p class="content">
+                Saya bersemangat untuk terus belajar dan berkembang di bidang
+                Teknologi Informasi. Di masa depan, saya bertujuan untuk
+                menggabungkan keahlian teknis dengan kemampuan interpersonal
+                untuk menciptakan solusi yang bermanfaat bagi masyarakat dan
+                industri teknologi.
+              </p>
+            </section>
           </div>
         </div>
-
-        <div class="container">
-          <section class="section">
-            <h2>Background</h2>
-            <p class="content">
-              Saya adalah mahasiswa Teknologi Informasi di Universitas Aisyiyah
-              Yogyakarta (UNISA) dengan minat yang kuat dalam pemrograman dan
-              teknologi. Saat ini, saya sedang menjelajahi berbagai bidang dalam
-              TI, seperti pengembangan perangkat lunak dan desain UI/UX. Di luar
-              teknologi, saya memiliki passion untuk olahraga, khususnya karate,
-              dimana saya telah meraih beberapa prestasi dalam kompetisi.
-            </p>
-          </section>
-
-          <section class="section">
-            <h2>Skills and Achievements</h2>
-            <ul class="achievements-list">
-              <li class="achievement-item">
-                <div class="bullet"></div>
-                <div class="achievement-content">
-                  Programming: Berpengalaman dalam bahasa pemrograman seperti C
-                  dan menjelajahi Full Stack Development dan UI/UX Design.
-                </div>
-              </li>
-              <li class="achievement-item">
-                <div class="bullet"></div>
-                <div class="achievement-content">
-                  Swimming Competition: Juara 3 dalam kompetisi renang di
-                  Mataram, Lombok Barat.
-                </div>
-              </li>
-              <li class="achievement-item">
-                <div class="bullet"></div>
-                <div class="achievement-content">
-                  Karate Competition: Juara 2 dalam kompetisi karate tingkat
-                  provinsi di Malang.
-                </div>
-              </li>
-              <li class="achievement-item">
-                <div class="bullet"></div>
-                <div class="achievement-content">
-                  Coding Competition: Juara 2 dalam kompetisi coding tingkat
-                  SMA.
-                </div>
-              </li>
-              <li class="achievement-item">
-                <div class="bullet"></div>
-                <div class="achievement-content">
-                  Technology Projects: Terlibat dalam beberapa proyek
-                  pengembangan aplikasi dan web.
-                </div>
-              </li>
-            </ul>
-          </section>
-
-          <section class="section">
-            <h2>Goals and Aspirations</h2>
-            <p class="content">
-              Saya bersemangat untuk terus belajar dan berkembang di bidang
-              Teknologi Informasi. Di masa depan, saya bertujuan untuk
-              menggabungkan keahlian teknis dengan kemampuan interpersonal untuk
-              menciptakan solusi yang bermanfaat bagi masyarakat dan industri
-              teknologi.
-            </p>
-          </section>
-        </div>
-      </div>
-    </main>
-
-    <script>
-      function handleDownload(event) {
-        const link = event.currentTarget;
-
-        // Add loading state
-        link.classList.add("loading");
-
-        // Fetch the file
-        fetch(link.href)
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error("Network response was not ok");
-            }
-            return response.blob();
-          })
-          .then((blob) => {
-            // Create a new URL for the blob
-            const url = window.URL.createObjectURL(blob);
-
-            // Create a temporary link and click it
-            const tempLink = document.createElement("a");
-            tempLink.href = url;
-            tempLink.download = link.getAttribute("download");
-            document.body.appendChild(tempLink);
-            tempLink.click();
-            document.body.removeChild(tempLink);
-
-            // Clean up
-            window.URL.revokeObjectURL(url);
-          })
-          .catch((error) => {
-            console.error("Download failed:", error);
-            alert(
-              "Maaf, terjadi kesalahan saat mengunduh CV. Silakan coba lagi nanti."
-            );
-          })
-          .finally(() => {
-            // Remove loading state
-            link.classList.remove("loading");
-          });
-      }
-    </script>
-  </body>
+      </main>
+    </body>
 </html>
