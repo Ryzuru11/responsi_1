@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Hilman Satia Pebrian</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .about-container {
+        padding-top: 5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .about-header {
+        text-align: center;
+        padding: 3rem 1rem;
+      }
+
+      .about-subtitle {
+        color: var(--text-secondary);
+        max-width: 600px;
+        margin: 1rem auto;
+      }
+
+      .about-content {
+        padding: 2rem;
+      }
+
+      .profile-section {
+        margin-bottom: 3rem;
+        text-align: center;
+      }
+
+      .about-profile-container {
+        width: 100%;
+        max-width: 300px;
+        margin: 2rem auto;
+        position: relative;
+      }
+
+      .about-profile-img {
+        width: 100%;
+        height: auto;
+        border-radius: 1rem;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        border: 4px solid var(--primary);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        opacity: 1 !important;
+      }
+
+      .about-profile-img:hover {
+        transform: scale(1.02);
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .info-sections {
+        display: grid;
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .info-section {
+        background: #f8f9fa;
+        padding: 2rem;
+        border-radius: 1rem;
+        transition: transform 0.3s ease;
+      }
+
+      .info-section:hover {
+        transform: translateY(-5px);
+      }
+
+      .info-section h2 {
+        color: var(--primary);
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+      }
+
+      .info-section p,
+      .info-section ul {
+        color: var(--text-secondary);
+        line-height: 1.6;
+      }
+
+      .info-section ul {
+        list-style-position: inside;
+        padding-left: 1rem;
+      }
+
+      .info-section li {
+        margin-bottom: 0.5rem;
+      }
+
+      @media (max-width: 768px) {
+        .about-header {
+          padding: 2rem 1rem;
+        }
+
+        .about-content {
+          padding: 1rem;
+        }
+
+        .info-section {
+          padding: 1.5rem;
+        }
+
+        .about-profile-container {
+          max-width: 250px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .about-profile-container {
+          max-width: 200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">Hilman Satia Pebrian</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#" class="active">About</a>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="about-container" role="main">
+      <section class="about-header">
+        <h1>About</h1>
+        <p class="about-subtitle">
+          Thanks for stopping by. Read below to learn more about myself and my
+          background.
+        </p>
+      </section>
+
+      <div class="about-content">
+        <section class="profile-section">
+          <div class="about-profile-container">
+            <img
+              src="img/rian2.jpg"
+              alt="Hilman Satia Pebrian"
+              class="about-profile-img"
+            />
+          </div>
+        </section>
+
+        <div class="info-sections">
+          <section class="info-section">
+            <h2>Background</h2>
+            <p>
+              I am an Information Technology student at Universitas Aisyiyah
+              Yogyakarta (UNISA) with a strong interest in programming and
+              technology. Currently, I am exploring various fields within IT,
+              such as software development and UI/UX design. Outside of
+              technology, I have a passion for sports, particularly karate,
+              where I have earned several achievements in competitions.
+            </p>
+          </section>
+
+          <section class="info-section">
+            <h2>Skills and Achievements</h2>
+            <ul>
+              <li>
+                Programming: Experienced in programming languages such as C and
+                exploring Full Stack Development and UI/UX Design.
+              </li>
+              <li>
+                Swimming Competition: 3rd place in a swimming competition in
+                Mataram, Lombok Barat.
+              </li>
+              <li>
+                Karate Competition: 2nd place in a provincial-level karate
+                competition in Malang.
+              </li>
+              <li>
+                Coding Competition: 2nd place in a high school coding
+                competition.
+              </li>
+              <li>
+                Technology Projects: Involved in several application and web
+                development projects.
+              </li>
+            </ul>
+          </section>
+
+          <section class="info-section">
+            <h2>Goals and Aspirations</h2>
+            <p>
+              I am excited to continue learning and growing in the field of
+              Information Technology. In the future, I aim to combine my
+              technical expertise with interpersonal skills to create solutions
+              that benefit both society and the tech industry.
+            </p>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
